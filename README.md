@@ -14,5 +14,5 @@ the workflow under `.github/workflows/golangci-lint.yml` for configuration of li
 ## References
 
 * Github Actions <https://github.com/features/actions>
-* Messging API <https://developers.facebook.com/docs/messenger-platform/>
+* Messaging API <https://developers.facebook.com/docs/messenger-platform/>
 * golangci-lint <https://github.com/golangci/golangci-lint>
