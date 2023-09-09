@@ -7,7 +7,8 @@ This is a chatbot that uses the messenger api to gather personal reviews from cu
 Continuous integration is enabled through github actions.
 The following workflows are enabled-
 
-* This package uses golangci-lint to run quick linters on go. Please check
+* Build and Test: This workflow uses the go cli to validate that source code can be built and all unit tests pass.
+* golangci-lint: This package uses golangci-lint to run quick linters on go. Please check
 the workflow under `.github/workflows/golangci-lint.yml` for configuration of linter.
 
 ## References
