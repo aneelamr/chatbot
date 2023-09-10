@@ -19,8 +19,8 @@ func LexEventHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Respo
 				Type:                 "Close",
 			},
 			Intent: lex.Intent{
-				ConfirmationState: "ConfirmIntent",
-				State:             "Confirmed",
+				ConfirmationState: "Confirmed",
+				State:             "Fulfilled",
 			},
 		},
 	}, nil
