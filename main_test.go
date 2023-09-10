@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/aws/aws-lambda-go/events"
+	"github.com/aneelamr/chatbot/lex"
 	"github.com/google/go-cmp/cmp"
 )
 
@@ -12,32 +12,18 @@ func TestLexEventHandler(t *testing.T) {
 
 	cases := []struct {
 		testName  string
-		testEvent events.LexEvent
-		expected  events.LexResponse
+		testEvent lex.LexV2Event
+		expected  lex.LexV2Response
 	}{
 		{
-			testName: "session attributes present",
-			testEvent: events.LexEvent{
-				CurrentIntent: &events.LexCurrentIntent{
-					Name: "TestIntent",
-				},
-				SessionAttributes: events.SessionAttributes{
-					"key1": "value1",
-					"key2": "value2",
-				},
-			},
-			expected: events.LexResponse{
-				SessionAttributes: events.SessionAttributes{
-					"key1": "value1",
-					"key2": "value2",
-				},
-				DialogAction: events.LexDialogAction{
-					Type: "Close",
-					Message: map[string]string{
-						"content":     "Hello from AWS Lambda!",
-						"contentType": "PlainText",
+			testName:  "expected response",
+			testEvent: lex.LexV2Event{},
+			expected: lex.LexV2Response{
+				SessionState: lex.SessionState{
+					DialogAction: lex.DialogAction{
+						SlotElicitationStyle: "Default",
+						Type:                 "Close",
 					},
-					FulfillmentState: "Fulfilled",
 				},
 			},
 		},

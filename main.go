@@ -4,24 +4,20 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/aws/aws-lambda-go/events"
+	"github.com/aneelamr/chatbot/lex"
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func LexEventHandler(ctx context.Context, event events.LexEvent) (*events.LexResponse, error) {
+func LexEventHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Response, error) {
 	fmt.Printf("Received an input from Amazon Lex. Current Event: %+v", event)
 
-	messageContent := "Hello from AWS Lambda!"
-
-	return &events.LexResponse{
-		SessionAttributes: event.SessionAttributes,
-		DialogAction: events.LexDialogAction{
-			Type: "Close",
-			Message: map[string]string{
-				"content":     messageContent,
-				"contentType": "PlainText",
+	//messageContent := "Hello from AWS Lambda!"
+	return &lex.LexV2Response{
+		SessionState: lex.SessionState{
+			DialogAction: lex.DialogAction{
+				SlotElicitationStyle: "Default",
+				Type:                 "Close",
 			},
-			FulfillmentState: "Fulfilled",
 		},
 	}, nil
 }
