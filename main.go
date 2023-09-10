@@ -24,6 +24,12 @@ func LexEventHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Respo
 				State:             "Fulfilled",
 			},
 		},
+		Messages: []lex.Message{
+			{
+				ContentType: "PlainText",
+				Content:     "Thanks for your order! Your Flowers will be delivered in 30 minutes.",
+			},
+		},
 	}, nil
 }
 

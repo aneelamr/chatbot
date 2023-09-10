@@ -30,6 +30,12 @@ func TestLexEventHandler(t *testing.T) {
 						State:             "Fulfilled",
 					},
 				},
+				Messages: []lex.Message{
+					{
+						ContentType: "PlainText",
+						Content:     "Thanks for your order! Your Flowers will be delivered in 30 minutes.",
+					},
+				},
 			},
 		},
 	}
