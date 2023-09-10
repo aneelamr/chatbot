@@ -29,7 +29,7 @@ func TestLexEventHandler(t *testing.T) {
 					DialogAction: lex.DialogAction{
 						SlotElicitationStyle: "Default",
 						Type:                 "Close",
-						SlotToElicit:         "PizzaType",
+						SlotToElicit:         "PizzaTypes",
 					},
 					Intent: lex.Intent{
 						Name:              "OrderPizza",
