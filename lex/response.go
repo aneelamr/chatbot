@@ -13,9 +13,11 @@ type LexV2Response struct {
 }
 
 type Message struct {
-	ContentType       string            `json:"contentType"`
-	Content           string            `json:"content"`
-	ImageResponseCard ImageResponseCard `json:"imageResponseCard,omitempty"`
+	ContentType string `json:"contentType"`
+	Content     string `json:"content"`
+
+	// TODO: Add logic to populate this field based on content type.
+	//ImageResponseCard ImageResponseCard `json:"imageResponseCard,omitempty"`
 }
 
 type ImageResponseCard struct {
