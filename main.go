@@ -9,7 +9,7 @@ import (
 )
 
 func LexEventHandler(ctx context.Context, event events.LexEvent) (*events.LexResponse, error) {
-	fmt.Printf("Received an input from Amazon Lex. Current Intent: %s", event.CurrentIntent.Name)
+	fmt.Printf("Received an input from Amazon Lex. Current Event: %+v", event)
 
 	messageContent := "Hello from AWS Lambda!"
 
