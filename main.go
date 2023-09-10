@@ -18,6 +18,10 @@ func LexEventHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Respo
 				SlotElicitationStyle: "Default",
 				Type:                 "Close",
 			},
+			Intent: lex.Intent{
+				ConfirmationState: "ConfirmIntent",
+				State:             "Fulfilled",
+			},
 		},
 	}, nil
 }

@@ -24,6 +24,10 @@ func TestLexEventHandler(t *testing.T) {
 						SlotElicitationStyle: "Default",
 						Type:                 "Close",
 					},
+					Intent: lex.Intent{
+						ConfirmationState: "ConfirmIntent",
+						State:             "Fulfilled",
+					},
 				},
 			},
 		},
