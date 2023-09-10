@@ -20,7 +20,7 @@ func LexEventHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Respo
 			},
 			Intent: lex.Intent{
 				ConfirmationState: "ConfirmIntent",
-				State:             "Fulfilled",
+				State:             "Confirmed",
 			},
 		},
 	}, nil

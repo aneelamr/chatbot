@@ -26,7 +26,7 @@ func TestLexEventHandler(t *testing.T) {
 					},
 					Intent: lex.Intent{
 						ConfirmationState: "ConfirmIntent",
-						State:             "Fulfilled",
+						State:             "Confirmed",
 					},
 				},
 			},
