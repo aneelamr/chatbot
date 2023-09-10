@@ -9,9 +9,10 @@ import (
 )
 
 func LexEventHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Response, error) {
-	fmt.Printf("Received an input from Amazon Lex. Current Event: %+v", event)
+	fmt.Printf("Received an input from Amazon Lex. Current Event: %+v \n", event)
 
-	//messageContent := "Hello from AWS Lambda!"
+	fmt.Printf("Intent name is: %s \n", event.SessionState.Intent.Name)
+
 	return &lex.LexV2Response{
 		SessionState: lex.SessionState{
 			DialogAction: lex.DialogAction{
