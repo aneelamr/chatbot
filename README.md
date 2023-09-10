@@ -2,9 +2,13 @@
 
 This is a chatbot that uses the messenger api to gather personal reviews from customers.
 
-## Creating Lambda zip File
+## Creating Lambda zip file locally
 
-```bash
+The below step is automated in the continuous integration pipeline.
+
+To create the lambda deployment zip file locally
+
+```shell
 GOOS=linux GOARCH=amd64 go build -o bootstrap main.go
 zip lambda-handler.zip bootstrap
 ```
