@@ -13,19 +13,25 @@ func TestLexEventHandler(t *testing.T) {
 	cases := []struct {
 		testName  string
 		testEvent lex.LexV2Event
-		expected  lex.LexV2Response
+		expected  *lex.LexV2Response
 	}{
 		{
-			testName:  "expected response",
-			testEvent: lex.LexV2Event{},
-			expected: lex.LexV2Response{
+			testName: "expected response",
+			testEvent: lex.LexV2Event{
+				SessionState: lex.SessionState{
+					Intent: lex.Intent{
+						Name: "OrderPizza",
+					},
+				},
+			},
+			expected: &lex.LexV2Response{
 				SessionState: lex.SessionState{
 					DialogAction: lex.DialogAction{
 						SlotElicitationStyle: "Default",
 						Type:                 "Close",
 					},
 					Intent: lex.Intent{
-						Name:              "OrderFlowers",
+						Name:              "OrderPizza",
 						ConfirmationState: "Confirmed",
 						State:             "Fulfilled",
 					},
@@ -33,7 +39,7 @@ func TestLexEventHandler(t *testing.T) {
 				Messages: []lex.Message{
 					{
 						ContentType: "PlainText",
-						Content:     "Thanks for your order! Your Flowers will be delivered in 30 minutes.",
+						Content:     "Thanks for your order! Your Pizza will be delivered in 30 minutes.",
 					},
 				},
 			},
@@ -46,7 +52,7 @@ func TestLexEventHandler(t *testing.T) {
 			if err != nil {
 				t.Errorf("Unexpected error: %v", err)
 			}
-			if cmp.Equal(actual, c.expected) {
+			if !cmp.Equal(actual, c.expected) {
 				t.Errorf("Expected: %v, got: %v", c.expected, actual)
 			}
 		})
