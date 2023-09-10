@@ -19,6 +19,7 @@ func LexEventHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Respo
 				Type:                 "Close",
 			},
 			Intent: lex.Intent{
+				Name:              "OrderFlowers",
 				ConfirmationState: "Confirmed",
 				State:             "Fulfilled",
 			},

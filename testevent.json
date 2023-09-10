@@ -1,0 +1,205 @@
+
+{
+    "messageVersion": "1.0",
+    "invocationSource": "DialogCodeHook | FulfillmentCodeHook",
+    "inputMode": "DTMF | Speech | Text",
+    "responseContentType": "CustomPayload | ImageResponseCard | PlainText | SSML",
+    "sessionId": "string",
+    "inputTranscript": "string",
+    "invocationLabel": "string",
+    "bot": {
+        "id": "string",
+        "name": "string",
+        "aliasId": "string",
+        "localeId": "string",
+        "version": "string"
+    },
+    "interpretations": [
+        {
+            "intent": {
+                "confirmationState": "Confirmed | Denied | None",
+                "name": "string",
+                "slots": {
+                    "string": {
+                        "shape": "List",
+                        "value": {
+                            "interpretedValue": "string",
+                            "originalValue": "string",
+                            "resolvedValues": [
+                                "string"
+                            ]
+                        },
+                        "values": [
+                            {
+                                "shape": "Scalar",
+                                "value": {
+                                    "originalValue": "string",
+                                    "interpretedValue": "string",
+                                    "resolvedValues": [
+                                        "string"
+                                    ]
+                                }
+                            },
+                            {
+                                "shape": "Scalar",
+                                "value": {
+                                    "originalValue": "string",
+                                    "interpretedValue": "string",
+                                    "resolvedValues": [
+                                        "string"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "state": "Failed | Fulfilled | FulfillmentInProgress | InProgress | ReadyForFulfillment | Waiting"
+            },
+            "nluConfidence": 2,
+            "sentimentResponse": {
+                "sentiment": "string",
+                "sentimentScore": {
+                    "mixed": 2,
+                    "negative": 2,
+                    "neutral": 2,
+                    "positive": 2
+                }
+            }
+        }
+    ],
+    "proposedNextState": {
+        "dialogAction": {
+            "slotToElicit": "string",
+            "type": "Close | ConfirmIntent | Delegate | ElicitIntent | ElicitSlot"
+        },
+        "intent": {
+            "name": "string",
+            "confirmationState": "Confirmed | Denied | None",
+            "slots": {},
+            "state": "Failed | Fulfilled | InProgress | ReadyForFulfillment | Waiting"
+        },
+        "prompt": {
+            "attempt": "string" 
+        }
+    },
+    "requestAttributes": {
+        "string": "string"
+    },
+    "sessionState": {
+        "activeContexts": [
+            {
+                "name": "string",
+                "contextAttributes": {
+                    "string": "string"
+                },
+                "timeToLive": {
+                    "timeToLiveInSeconds": 2,
+                    "turnsToLive": 2
+                }
+            }
+        ],
+        "sessionAttributes": {
+            "string": "string"
+        },
+        "runtimeHints": {
+            "slotHints": {
+                "string": {
+                    "string": {
+                        "runtimeHintValues": [
+                            {
+                                "phrase": "string"
+                            },
+                            {
+                                "phrase": "string"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "dialogAction": {
+            "slotToElicit": "string",
+            "type": "Close | ConfirmIntent | Delegate | ElicitIntent | ElicitSlot"
+        },
+        "intent": {
+            "confirmationState": "Confirmed | Denied | None",
+            "name": "string",
+            "slots": {
+                "string": {
+                    "shape": "List",
+                    "value": {
+                        "interpretedValue": "string",
+                        "originalValue": "string",
+                        "resolvedValues": [
+                            "string"
+                        ]
+                    },
+                    "values": [
+                        {
+                            "shape": "Scalar",
+                            "value": {
+                                "originalValue": "string",
+                                "interpretedValue": "string",
+                                "resolvedValues": [
+                                    "string"
+                                ]
+                            }
+                        },
+                        {
+                            "shape": "Scalar",
+                            "value": {
+                                "originalValue": "string",
+                                "interpretedValue": "string",
+                                "resolvedValues": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "state": "Failed | Fulfilled | FulfillmentInProgress | InProgress | ReadyForFulfillment | Waiting",
+            "originatingRequestId": "string"
+        }
+    },
+    "transcriptions": [
+        {
+            "transcription": "string",
+            "transcriptionConfidence": 2,
+            "resolvedContext": {
+                "intent": "string"
+            },
+            "resolvedSlots": {
+                "string": {
+                    "shape": "List",
+                    "value": {
+                        "originalValue": "string",
+                        "resolvedValues": [
+                            "string"
+                        ]
+                    },
+                    "values": [
+                        {
+                            "shape": "Scalar",
+                            "value": {
+                                "originalValue": "string",
+                                "resolvedValues": [
+                                    "string"
+                                ]
+                            }
+                        },
+                        {
+                            "shape": "Scalar",
+                            "value": {
+                                "originalValue": "string",
+                                "resolvedValues": [
+                                    "string"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
