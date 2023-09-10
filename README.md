@@ -19,6 +19,14 @@ Amazon Lex is a fully managed artificial intelligence (AI) service with advanced
 
 Lambda responds to events from a Lex Bot.
 
+## Package Structure
+
+A quick tour of this package's contents
+
+* intents: Intents are the goals that your users want to accomplish, such as ordering flowers or booking a hotel. Your bot must have at least one intent. This package has handlers for handling various user intents. See more: <https://docs.aws.amazon.com/lexv2/latest/dg/add-intents.html>
+
+* lex: Lex contains event and response structs that interact with the lex API.
+
 ## Continuous Integration/ Continuous Deployment
 
 CI/CD is enabled through github actions.
