@@ -37,7 +37,7 @@ type Attributes struct {
 type SessionState struct {
 	ActiveContexts    []ActiveContext `json:"activeContexts"`
 	SessionAttributes Attributes      `json:"sessionAttributes"`
-	RuntimeHints      RuntimeHints    `json:"runtimeHints"`
+	RuntimeHints      RuntimeHints    `json:"runtimeHints,omitempty"`
 	DialogAction      DialogAction    `json:"dialogAction"`
 	Intent            Intent          `json:"intent"`
 }
