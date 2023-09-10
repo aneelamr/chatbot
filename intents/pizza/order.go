@@ -12,6 +12,7 @@ func OrderHandler(ctx context.Context, event lex.LexV2Event) (*lex.LexV2Response
 			DialogAction: lex.DialogAction{
 				SlotElicitationStyle: "Default",
 				Type:                 "Close",
+				SlotToElicit:         "PizzaType",
 			},
 			Intent: lex.Intent{
 				Name:              "OrderPizza",
